@@ -25,7 +25,7 @@
           <a href="#">Home</a>
           <a href="#my-profile">My Profile</a>
           <a href="#portofolio">Portofolio</a>
-          <a href="#message-us">Message Us</a>
+          <a href="#message-us">Message</a>
         </div>
       </nav>
     </header>
@@ -33,20 +33,70 @@
     <!-- Sections -->
     <main>
       <!-- Hero section -->
-      <section class="hero" href="#">
+      <section class="hero" id="">
         <h1>Welcome <span>User</span> to Portofolio Ayaa</h1>
       </section>
 
       <!-- Our Profile -->
-      <section class="profile" id="#my-profile">
+      <section class="profile" id="my-profile">
         <h1>My Profile</h1>
       </section>
       <!-- Portofolio -->
-      <section class="portofolio" id="#portofolio"></section>
+      <section class="portofolio" id="portofolio">
+        <h1>Portofolio</h1>
+      </section>
 
       <!-- Message Us -->
-      <section class="message" id="#message-us"></section>
+      <section class="message" id="message-us">
+        <h1>Message Me</h1>
+        <br />
+        <div class="container">
+          <!-- Form Input -->
+          <form id="messageForm">
+            <div>
+              <label>Nama :</label>
+              <br />
+              <input
+                class="label"
+                type="text"
+                id="nama"
+                placeholder="Nama"
+                required
+              />
+            </div>
+            <div>
+              <label>Tanggal Lahir :</label>
+              <br />
+              <input class="label" type="date" id="tglLahir" required />
+            </div>
+            <div>
+              <label>Jenis Kelamin :</label>
+              <br />
+              <input type="radio" name="gender" value="Laki - Laki" required />
+              Laki-Laki
+              <input type="radio" name="gender" value="Perempuan" /> Perempuan
+            </div>
+            <div>
+              <label>Pesan :</label>
+              <br />
+              <textarea class="label" id="pesan" placeholder="Pesan"></textarea>
+            </div>
+            <div>
+              <button class="sub-button" type="submit">Submit</button>
+            </div>
+          </form>
+          <!-- Output -->
+          <div class="output" id="outputBox">
+            <!-- Hasil akan muncul di sini -->
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Created by: Mazaya</p>
+    </footer>
 
     <!-- Javascript -->
     <script src="js/script.js"></script>
