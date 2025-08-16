@@ -32,7 +32,7 @@ header {
   justify-content: space-between;
   font-family: poppins;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .navbar a {
@@ -40,10 +40,44 @@ header {
   color: #ffffff;
   text-decoration: none;
   padding: 5px 10px;
+  gap: 50px;
   transition: color 0.3s ease;
 }
 
 .navbar a:hover {
+  color: #90a2e4;
+  text-decoration: none;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.navbar a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #90a2e4;
+  transform: scaleX(0);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  transform: scaleX(0.5);
+}
+
+#hamburger-menu {
+  display: none;
+  color: #ffffff;
+}
+
+.navbar-extra a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-extra a:hover {
   color: #90a2e4;
   text-decoration: none;
   transform: scale(1.05);
@@ -165,6 +199,7 @@ header {
 .porto-item h2 {
   font-family: poppins;
   font-weight: 600;
+  font-size: 20px;
   color: #395886;
   text-align: center;
   margin-bottom: 10px;
@@ -342,6 +377,45 @@ textarea {
   nav {
     flex-direction: column;
     text-align: center;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #395886;
+    border-radius: 0 0 0 20px;
+    opacity: 0.9;
+    width: 200px;
+    height: 30vh;
+    flex-direction: column;
+    padding: 20px;
+    transition: 0.3s ease;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    color: #ffffff;
+    display: block;
+    padding: 10px;
+    margin: 0;
+    text-decoration: none;
+  }
+
+  .navbar a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar a:hover::after {
+    transform: scaleX(1);
+  }
+
+  #hamburger-menu {
+    display: block;
+    cursor: pointer;
   }
 
   .container {
