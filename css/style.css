@@ -68,6 +68,8 @@ header {
 #hamburger-menu {
   display: none;
   color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .navbar-extra a {
@@ -78,9 +80,9 @@ header {
 }
 
 .navbar-extra a:hover {
-  color: #90a2e4;
+  color: #8aaee0;
   text-decoration: none;
-  transform: scale(1.05);
+  transform: scale(1.25);
   transition: transform 0.3s ease;
 }
 
